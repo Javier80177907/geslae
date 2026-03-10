@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Apoyos de Escalera</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+
+  <h1>🪜 Sistema de Apoyos de Escalera</h1>
+
+  <!-- LOGIN -->
+  <section id="login">
+    <h2> Iniciar sesión</h2>
+    <input type="email" id="email" placeholder="Usuario (correo)">
+    <br><br>
+    <input type="password" id="password" placeholder="Contraseña">
+    <br><br>
+    <button onclick="login()">Ingresar</button>
+    <p id="loginEstado"></p>
+  </section>
+
+  <hr>
+
+  <!-- APP -->
+  <section id="app" style="display:none;">
+    <div class="container">
+
+      <!-- Lista de solicitudes -->
+      <div class="panel" id="panelSolicitudes">
+        <h2>📋 Solicitudes en cola</h2>
+        <ul id="listaSolicitudes"></ul>
+      </div>
+
+      <!-- Formulario y mapa -->
+      <div class="panel" id="panelFormulario">
+        <h2>👷 Solicitar apoyo</h2>
+        <input type="text" id="tecnico" placeholder="Nombre del técnico">
+        <br><br>
+        <button onclick="obtenerUbicacion()">📍 Obtener ubicación</button>
+        <p id="ubicacion"></p>
+        <button onclick="solicitarApoyo()">🚨 Solicitar apoyo</button>
+        <div id="estado"></div>
+
+        <h2>🗺️ Mapa de apoyos</h2>
+        <div id="mapa" style="height: 300px; width: 100%;"></div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
+

@@ -1,0 +1,50 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+  background: #eef2f5;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* LOGIN */
+#login {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Contenedor principal de la app */
+.container {
+  display: flex;
+  gap: 20px;
+}
+
+/* Paneles */
+.panel {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Lista de solicitudes */
+#panelSolicitudes {
+  flex: 1;
+  max-width: 350px;
+  overflow-y: auto;
+  height: 600px;
+}
+
+/* Formulario y mapa */
+#panelFormulario {
+  flex: 2;
+}
+
+/* Lista de solicitudes */
+#listaSolicitudes li {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
