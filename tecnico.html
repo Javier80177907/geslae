@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apoyos Escalera · Técnico</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-app">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="topbar-logo">🪜 APOYOS<span>ESCALERA</span></span>
+    </div>
+    <div class="topbar-center">
+      <div class="topbar-status">
+        <span class="live-dot"></span>
+        <span>👷 TÉCNICO</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span id="topbar-user" class="topbar-user"></span>
+      <button class="btn-logout" onclick="cerrarSesion()">SALIR</button>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <div class="app-body">
+    <div class="crear-layout">
+
+      <!-- COL 1: Formulario -->
+      <div class="crear-form">
+        <div class="form-section-title">📡 NUEVA SOLICITUD</div>
+
+        <div class="field">
+          <label class="field-label">NOMBRE DEL TÉCNICO</label>
+          <input type="text" id="f-tecnico" class="field-input" placeholder="Ej. Juan Pérez">
+        </div>
+
+        <div class="field geo-field">
+          <label class="field-label">DIRECCIÓN</label>
+          <div class="geo-input-wrap">
+            <input type="text" id="f-direccion" class="field-input"
+                   placeholder="Ej. Cra 7 # 45-12, Bogotá"
+                   oninput="onDireccionInput()"
+                   autocomplete="off">
+            <div class="geo-spinner" id="geo-spinner"></div>
+          </div>
+          <ul class="geo-suggestions" id="geo-suggestions"></ul>
+        </div>
+
+        <div class="geo-status-bar">
+          <div class="geo-status-dot" id="geo-status-dot"></div>
+          <span id="geo-status-text">Escribe una dirección para ubicarla en el mapa</span>
+        </div>
+
+        <div class="field">
+          <label class="field-label">NÚMERO DE CELULAR</label>
+          <input type="tel" id="f-celular" class="field-input" placeholder="Ej. 3001234567">
+        </div>
+
+        <button class="btn-enviar" onclick="crearApoyo()">
+          🚨 SOLICITAR APOYO
+        </button>
+        <div id="crear-status" class="crear-status"></div>
+      </div>
+
+      <!-- COL 2: Mapa -->
+      <div class="crear-map-wrap">
+        <div class="map-label-bar">
+          <span class="map-label-text">UBICACIÓN EN EL MAPA</span>
+          <span class="map-drag-hint" id="map-drag-hint">✋ Arrastra el pin para ajustar la posición exacta</span>
+        </div>
+        <div id="mapa-crear" class="mini-map"></div>
+        <div class="coords-bar" id="coords-bar">
+          <span class="coords-label">COORDENADAS</span>
+          <span class="coords-val" id="coords-val">—</span>
+          <span class="coords-note">Actualiza al arrastrar el pin</span>
+        </div>
+      </div>
+
+      <!-- COL 3: Historial -->
+      <div class="historial-wrap">
+        <div class="historial-header">
+          <div class="historial-title">📋 MIS APOYOS</div>
+          <div class="historial-badge" id="historial-count">0</div>
+        </div>
+        <ul class="historial-list" id="historial-list">
+          <li class="historial-empty">Sin apoyos registrados aún</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="firebase.js"></script>
+  <script src="tecnico.js"></script>
+</body>
+</html>

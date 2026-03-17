@@ -1,62 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Apoyos de Escalera</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apoyos Escalera · Ingreso</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="page-login">
 
-  <h1>🪜 Sistema de Apoyos de Escalera</h1>
+  <div class="login-bg"><div class="login-grid"></div></div>
 
-  <!-- LOGIN -->
-  <section id="login">
-    <h2> Iniciar sesión</h2>
-    <input type="email" id="email" placeholder="Usuario (correo)">
-    <br><br>
-    <input type="password" id="password" placeholder="Contraseña">
-    <br><br>
-    <button onclick="login()">Ingresar</button>
-    <p id="loginEstado"></p>
-  </section>
+  <div class="login-wrap">
 
-  <hr>
-
-  <!-- APP -->
-  <section id="app" style="display:none;">
-    <div class="container">
-
-      <!-- Lista de solicitudes -->
-      <div class="panel" id="panelSolicitudes">
-        <h2>📋 Solicitudes en cola</h2>
-        <ul id="listaSolicitudes"></ul>
-      </div>
-
-      <!-- Formulario y mapa -->
-      <div class="panel" id="panelFormulario">
-        <h2>👷 Solicitar apoyo</h2>
-        <input type="text" id="tecnico" placeholder="Nombre del técnico">
-        <br><br>
-        <button onclick="obtenerUbicacion()">📍 Obtener ubicación</button>
-        <p id="ubicacion"></p>
-        <button onclick="solicitarApoyo()">🚨 Solicitar apoyo</button>
-        <div id="estado"></div>
-
-        <h2>🗺️ Mapa de apoyos</h2>
-        <div id="mapa" style="height: 300px; width: 100%;"></div>
-      </div>
-
+    <div class="login-header">
+      <div class="login-icon"></div>
+      <h1 class="login-title">APOYOS<span>ESCALERA</span></h1>
+      <p class="login-sub">Sistema Operativo de Campo · Conectar</p>
     </div>
-  </section>
+
+    <div class="login-card">
+
+      <div class="field">
+        <label class="field-label">USUARIO</label>
+                <input type="email" id="login-email" class="field-input"
+              placeholder="correo@empresa.com"
+              autocomplete="username"
+              onkeydown="if(event.key==='Enter') doLogin()">
+      </div>
+
+      <div class="field">
+        <label class="field-label">CONTRASEÑA</label>
+        <input type="password" id="login-pass" class="field-input"
+              placeholder="••••••••"
+              autocomplete="current-password"
+              onkeydown="if(event.key==='Enter') doLogin()">
+      </div>
+
+      <button class="btn-login" onclick="doLogin()">
+        <span>INGRESAR AL SISTEMA</span>
+        <span class="btn-arrow">→</span>
+      </button>
+
+      <p id="login-error" class="login-error"></p>
+    </div>
+
+    <div class="login-hint">
+      <span class="hint-label">CREDENCIALES DE PRUEBA</span>
+      <div class="hint-creds">
+        <div>👷 tecnico@conectar.com · Tec2025</div>
+        <div>🚗 conductor@conectar.com · Con2025</div>
+        <div>🛡️ admin@conectar.com · Adm2025</div>
+      </div>
+    </div>
+
+  </div>
 
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="app.js"></script>
+  <script src="firebase.js"></script>
+  <script>
+    // Si ya hay sesión activa, redirigir directo
+    (function() {
+      const u = obtenerSesion();
+      if (u) window.location.href = u.role + ".html";
+    })();
 
+    function doLogin() {
+      const email  = document.getElementById("login-email").value.trim().toLowerCase();
+      const pass   = document.getElementById("login-pass").value.trim();
+      const errEl  = document.getElementById("login-error");
+      errEl.innerText = "";
+
+      if (!email) { errEl.innerText = "❌ Ingresa tu correo";      return; }
+      if (!pass)  { errEl.innerText = "❌ Ingresa tu contraseña";  return; }
+
+      const user = USERS[email];
+      if (!user)              { errEl.innerText = "❌ Usuario no encontrado";  return; }
+      if (user.pass !== pass) { errEl.innerText = "❌ Contraseña incorrecta"; return; }
+
+      guardarSesion({ email, role: user.role, name: user.name });
+      window.location.href = user.role + ".html";
+    }
+  </script>
 </body>
 </html>
-

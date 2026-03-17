@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Apoyos Escalera · Conductor</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Barlow:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body class="page-app">
+
+  <!-- TOP BAR -->
+  <header class="topbar">
+    <div class="topbar-left">
+      <span class="topbar-logo">🪜 APOYOS<span>ESCALERA</span></span>
+    </div>
+    <div class="topbar-center">
+      <div class="topbar-status">
+        <span class="live-dot"></span>
+        <span>🚗 CONDUCTOR</span>
+      </div>
+    </div>
+    <div class="topbar-right">
+      <span id="topbar-user" class="topbar-user"></span>
+      <button class="btn-logout" onclick="cerrarSesion()">SALIR</button>
+    </div>
+  </header>
+
+  <!-- STATS BAR -->
+  <div class="stats-bar">
+    <div class="stat-chip stat-total"><span id="stat-total">0</span><small>TOTAL</small></div>
+    <div class="stat-chip stat-pend"><span id="stat-pend">0</span><small>PENDIENTES</small></div>
+    <div class="stat-chip stat-proc"><span id="stat-proc">0</span><small>EN PROCESO</small></div>
+    <div class="stat-chip stat-fin"><span id="stat-fin">0</span><small>FINALIZADOS</small></div>
+    <div class="stats-label">APOYOS EN TIEMPO REAL</div>
+  </div>
+
+  <!-- BODY -->
+  <div class="app-body">
+    <div class="lista-layout">
+
+      <!-- Lista de tarjetas -->
+      <div class="lista-cards" id="lista-cards">
+        <div class="empty-state">Cargando apoyos...</div>
+      </div>
+
+      <!-- Mapa -->
+      <div class="lista-map-wrap">
+        <div class="map-label">🗺️ MAPA EN TIEMPO REAL · Selecciona un apoyo para resaltarlo</div>
+        <div id="mapa-lista" class="lista-map"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="firebase.js"></script>
+  <script src="conductor.js"></script>
+</body>
+</html>
