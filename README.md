@@ -7,15 +7,14 @@ Plataforma web en tiempo real para la gestión y coordinación de apoyos técnic
 📸 Capturas del Sistema
 <br>
 Pantalla de Ingreso
-<img src=".jpg" alt="Descripción de la imagen">
+
 <br>
 Vista del Administrador
 <!-- Reemplaza esta línea con tu imagen: ![Admin](./screenshots/admin.png) -->
 [ Inserta aquí imagen del panel admin — screenshots/admin.png ]
 <br>
 Vista del Conductor
-<!-- Reemplaza esta línea con tu imagen: ![Conductor](./screenshots/conductor.png) -->
-[ Inserta aquí imagen del panel conductor — screenshots/conductor.png ]
+<img src="https://github.com/Javier80177907/geslae/blob/760169c03d5bb9a7288cae8ab800da1aeb6961b2/conductor.jpg" alt="rol conductor">
 <br>
 Vista del Técnico
 <!-- Reemplaza esta línea con tu imagen: ![Técnico](./screenshots/tecnico.png) -->
