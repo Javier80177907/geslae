@@ -17,8 +17,7 @@ Vista del Conductor
 <img src="https://github.com/Javier80177907/geslae/blob/760169c03d5bb9a7288cae8ab800da1aeb6961b2/conductor.jpg" alt="rol conductor">
 <br>
 Vista del Técnico
-<!-- Reemplaza esta línea con tu imagen: ![Técnico](./screenshots/tecnico.png) -->
-[ Inserta aquí imagen del panel técnico — screenshots/tecnico.png ]
+<img src=https://github.com/Javier80177907/geslae/blob/6f28542b2e152459c6fecac10f27dfc2498cbebf/tecnico.jpg alt="rol tecnico">
 
 📖 Descripción
 Apoyos Escalera es una aplicación web operativa diseñada para coordinar en tiempo real las solicitudes de apoyo de técnicos en campo. Permite registrar ubicaciones precisas con geocodificación, hacer seguimiento del estado de cada apoyo y visualizar todo en un mapa interactivo. Construida sobre Firebase Realtime Database, garantiza sincronización instantánea entre todos los roles del sistema.
