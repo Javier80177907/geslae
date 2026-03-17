@@ -7,17 +7,23 @@ Plataforma web en tiempo real para la gestión y coordinación de apoyos técnic
 📸 Capturas del Sistema
 <br>
 Pantalla de Ingreso
+<br>
 <img src="https://github.com/Javier80177907/geslae/blob/cf13d2c74d69572605f4501abc4b2c332fac0dc4/escalera.jpg" alt="rol inicio">
 <br>
 Vista del Administrador
+<br>
 <img src="https://github.com/Javier80177907/geslae/blob/f0d37d757cf0269b45f94cc27b3e6bc4dbf313b0/admin.jpg" alt="rol admin">
 <br>
+<br>
 Vista del Conductor
+<br>
 <img src="https://github.com/Javier80177907/geslae/blob/760169c03d5bb9a7288cae8ab800da1aeb6961b2/conductor.jpg" alt="rol conductor">
 <br>
-Vista del Técnico
-<img src=https://github.com/Javier80177907/geslae/blob/6f28542b2e152459c6fecac10f27dfc2498cbebf/tecnico.jpg alt="rol tecnico">
 
+Vista del Técnico
+<br>
+<img src=https://github.com/Javier80177907/geslae/blob/6f28542b2e152459c6fecac10f27dfc2498cbebf/tecnico.jpg alt="rol tecnico">
+<br>
 📖 Descripción
 Apoyos Escalera es una aplicación web operativa diseñada para coordinar en tiempo real las solicitudes de apoyo de técnicos en campo. Permite registrar ubicaciones precisas con geocodificación, hacer seguimiento del estado de cada apoyo y visualizar todo en un mapa interactivo. Construida sobre Firebase Realtime Database, garantiza sincronización instantánea entre todos los roles del sistema.
 
