@@ -10,8 +10,7 @@ Pantalla de Ingreso
 
 <br>
 Vista del Administrador
-<!-- Reemplaza esta línea con tu imagen: ![Admin](./screenshots/admin.png) -->
-[ Inserta aquí imagen del panel admin — screenshots/admin.png ]
+<img src="https://github.com/Javier80177907/geslae/blob/760169c03d5bb9a7288cae8ab800da1aeb6961b2/conductor.jpg" alt="rol conductor">
 <br>
 Vista del Conductor
 <img src="https://github.com/Javier80177907/geslae/blob/760169c03d5bb9a7288cae8ab800da1aeb6961b2/conductor.jpg" alt="rol conductor">
