@@ -7,7 +7,7 @@ Plataforma web en tiempo real para la gestión y coordinación de apoyos técnic
 📸 Capturas del Sistema
 <br>
 Pantalla de Ingreso
-
+<img src="https://github.com/Javier80177907/geslae/blob/f0d37d757cf0269b45f94cc27b3e6bc4dbf313b0/admin.jpg" alt="rol admin">
 <br>
 Vista del Administrador
 <img src="https://github.com/Javier80177907/geslae/blob/f0d37d757cf0269b45f94cc27b3e6bc4dbf313b0/admin.jpg" alt="rol admin">
