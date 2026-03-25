@@ -61,5 +61,11 @@ Mapa dual: uno en el listado general y otro en la creación de apoyos
 
 Basado en Leaflet + OpenStreetMap
 Marcadores con colores según estado y urgencia
-Animación flyTo al seleccionar un apoyo
-Popups con información completa del técnico
+
+Base de datos-modelo entidad relacion
+<br>
+<br>
+El presente modelo entidad-relación describe la estructura de datos del sistema Apoyos Escalera, plataforma web de coordinación de técnicos en campo dentro de Conectar. El modelo incorpora tres roles de usuario: Técnico, Conductor y Administrador, cada uno con atributos y responsabilidades específicas.
+<br>
+<img src="https://github.com/Javier80177907/geslae/blob/cf13d2c74d69572605f4501abc4b2c332fac0dc4/escalera.jpg" alt="rol inicio">
+
