@@ -84,5 +84,6 @@ Marcadores con colores según estado y urgencia
 <br>
 El presente modelo entidad-relación describe la estructura de datos del sistema Apoyos Escalera, plataforma web de coordinación de técnicos en campo dentro de Conectar. El modelo incorpora tres roles de usuario: Técnico, Conductor y Administrador, cada uno con atributos y responsabilidades específicas.
 <br>
-<img src="https://github.com/Javier80177907/geslae/blob/cf13d2c74d69572605f4501abc4b2c332fac0dc4/escalera.jpg" alt="rol inicio">
+<img src="modelo er.png" alt="rol inicio">
+
 
