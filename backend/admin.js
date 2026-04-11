@@ -24,7 +24,7 @@ let geoDebounce = null;
 let geoMarker   = null;
 
 /* ══════════════════════════════════════════════
-   TABS
+   TABS desactiva botones y los activa para q el mapa no quede cortado
 ══════════════════════════════════════════════ */
 function activarTab(btn, tabId) {
   document.querySelectorAll(".tab-btn").forEach(b   => b.classList.remove("active"));
@@ -38,7 +38,7 @@ function activarTab(btn, tabId) {
 }
 
 /* ══════════════════════════════════════════════
-   INICIALIZAR
+   INICIALIZAR cargar datos de firebade y mostrar mapas
 ══════════════════════════════════════════════ */
 window.addEventListener("load", function () {
   // Mapa lista
@@ -58,7 +58,7 @@ window.addEventListener("load", function () {
 });
 
 /* ══════════════════════════════════════════════
-   FIREBASE
+   FIREBASE mantiene sincronizado el listado de apoyos en tiempo real con firebase
 ══════════════════════════════════════════════ */
 function escucharSolicitudes() {
   db.ref("solicitudes").on("value", snapshot => {
@@ -76,7 +76,7 @@ function escucharSolicitudes() {
 }
 
 /* ══════════════════════════════════════════════
-   RENDER LISTA (tab apoyos)
+   RENDER LISTA (tab apoyos) arma lista y construye una tarjeta con cada apoyo
 ══════════════════════════════════════════════ */
 function renderLista() {
   const container = document.getElementById("lista-cards");
@@ -136,7 +136,8 @@ function buildCard(key, s) {
 }
 
 /* ══════════════════════════════════════════════
-   SELECCIONAR APOYO
+   SELECCIONAR APOYO sincroniza la tarjeta con el mapa, 
+   resaltando y centrando el apoyo elegido.
 ══════════════════════════════════════════════ */
 function seleccionarApoyo(key) {
   if (selectedKey) {
@@ -155,7 +156,7 @@ function seleccionarApoyo(key) {
 }
 
 /* ══════════════════════════════════════════════
-   MARCADORES
+   MARCADORES actualiza mapa con seleccion de marcadores y actualiza tarjeta
 ══════════════════════════════════════════════ */
 function renderMarcadores() {
   Object.values(marcadores).forEach(m => mapaLista.removeLayer(m));
