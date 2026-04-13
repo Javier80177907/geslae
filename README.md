@@ -87,8 +87,11 @@ El presente modelo entidad-relación describe la estructura de datos del sistema
 <br>
 <br>
 
-<h2> para mas informacion dirigirse a la carpeta documentos donde encontraremos la documentacion detallada</h2>
+
 <br>
 <br>
 <img width="3008" height="2216" alt="modelo er" src="https://github.com/user-attachments/assets/8a7dab20-26c8-46a7-bd4e-c7343e534354" />
+
+<h2> -----------------------------------------------------------------------------------------------------------</h2>
+<h2> Para mas informacion dirigirse a la carpeta documentos donde encontraremos la documentacion detallada</h2>
 
