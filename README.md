@@ -18,25 +18,31 @@
 
   <!-- SCREENSHOTS -->
   <h2><span class="icon">📸</span> Capturas del Sistema</h2>
+  <br>
+  <br>
   <div class="screenshots">
     <div class="screenshot-card">
       <img src="https://github.com/Javier80177907/geslae/blob/cf13d2c74d69572605f4501abc4b2c332fac0dc4/escalera.jpg?raw=true" alt="Pantalla de ingreso" onerror="this.style.minHeight='160px';this.style.background='#21262d'"/>
+     <br>
       <div class="cap">🔐 Pantalla de Ingreso — Login con selección de rol</div>
     </div>
+    <br>
     <div class="screenshot-card">
       <img src="https://github.com/Javier80177907/geslae/blob/f0d37d757cf0269b45f94cc27b3e6bc4dbf313b0/admin.jpg?raw=true" alt="Vista administrador" onerror="this.style.minHeight='160px';this.style.background='#21262d'"/>
-      <div class="cap">🛡️ Vista del Administrador — Control total + estadísticas</div>
+     <br> <div class="cap">🛡️ Vista del Administrador — Control total + estadísticas</div>
     </div>
+    <br>
+    <br>
     <div class="screenshot-card">
       <img src="https://github.com/Javier80177907/geslae/blob/760169c03d5bb9a7288cae8ab800da1aeb6961b2/conductor.jpg?raw=true" alt="Vista conductor" onerror="this.style.minHeight='160px';this.style.background='#21262d'"/>
-      <div class="cap">🚗 Vista del Conductor — Mapa en tiempo real + estados</div>
+     <br> <div class="cap">🚗 Vista del Conductor — Mapa en tiempo real + estados</div>
     </div>
     <div class="screenshot-card">
       <img src="https://github.com/Javier80177907/geslae/blob/6f28542b2e152459c6fecac10f27dfc2498cbebf/tecnico.jpg?raw=true" alt="Vista técnico" onerror="this.style.minHeight='160px';this.style.background='#21262d'"/>
-      <div class="cap">📡 Vista del Técnico — Formulario + mapa geocodificado</div>
+      <br><div class="cap">📡 Vista del Técnico — Formulario + mapa geocodificado</div>
     </div>
   </div>
-
+<br><br>
   <!-- DESCRIPCIÓN -->
   <h2><span class="icon">📖</span> Descripción</h2>
   <p>
